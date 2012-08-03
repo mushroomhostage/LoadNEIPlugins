@@ -1,4 +1,4 @@
 #!/bin/sh
-javac -cp minecraftforge-client-3.3.8.152.zip:NEI_ForestryPlugin\ 1.0.5.17.zip:NEI_RailCraftPlugin\ 1.2.2.1.zip:NEI_RedPowerPlugin\ 1.2.2.3.zip:CodeChickenCore-Client\ 0.5.3.zip:NotEnoughItems-Client\ 1.2.2.4.zip mod_LoadNEIPlugins.java
-zip -r LoadNEIPlugins.zip *.class
+javac -cp minecraftforge-client-3.3.8.164.zip:NEI_ForestryPlugin\ 1.1.1.20.zip:NEI_RailCraftPlugin\ 1.3.1.2.zip:NEI_RedPowerPlugin\ 1.3.zip:NEI_IC2Plugin\ 1.0.2.9.zip:CodeChickenCore-Client\ 0.5.5.zip:NotEnoughItems-Client\ 1.3.0.1.zip mod_LoadNEIPlugins.java
+zip -r LoadNEIPlugins-1.2.5r2.zip *.class
 

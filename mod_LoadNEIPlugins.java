@@ -3,41 +3,45 @@ import codechicken.nei.IConfigureNEI;
 
 public class mod_LoadNEIPlugins extends BaseMod {
     public String getVersion() {
-        return "1.2.5";
+        return "1.2.5r2";
     }
 
     public void load() {
+    }
+    
+    @Override
+    public void modsLoaded() {
         System.out.println("Loading NEI plugins");
 
         // TODO: configurable
+
         try {
-            (new codechicken.nei.plugins.forge.NEIForgeOreConfig()).loadConfig();
-            System.out.println("Loaded codechicken.nei.plugins.forge.NEIForgeOreConfig");
+            (new mistaqur.nei.forestry.NEIForestryConfig()).loadConfig();
+            System.out.println("Loaded mistaqur.nei.forestry.NEIForestryConfig()");
         } catch (Exception e) {
-            System.out.println("Not loading codechicken.nei.plugins.forge.NEIForgeOreConfig");
+            System.out.println("Not loading mistaqur.nei.forestry.NEIForestryConfig(): "+e);
         }
 
 
         try {
-            (new codechicken.nei.plugins.forestry.NEIForestryConfig()).loadConfig();
-            System.out.println("Loaded codechicken.nei.plugins.forestry.NEIForestryConfig");
+            (new mistaqur.nei.railcraft.NEIRailCraftConfig()).loadConfig();
+            System.out.println("Loaded mistaqur.nei.railcraft.NEIRailCraftConfig");
         } catch (Exception e) {
-            System.out.println("Not loading codechicken.nei.plugins.forestry.NEIForestryConfig");
+            System.out.println("Not loading mistaqur.nei.railcraft.NEIRailCraftConfig: "+e);
         }
 
-
         try {
-            (new codechicken.nei.plugins.railcraft.NEIRailCraftConfig()).loadConfig();
-            System.out.println("Loaded codechicken.nei.plugins.railcraft.NEIRailCraftConfig");
+            (new mistaqur.nei.ic2.NEI_IC2_Config()).loadConfig();
+            System.out.println("Loaded mistaqur.nei.ic2.NEI_IC2_Config");
         } catch (Exception e) {
-            System.out.println("Not loading codechicken.nei.plugins.railcraft.NEIRailCraftConfig");
+            System.out.println("Not loading mistaqur.nei.ic2.NEI_IC2_Config: "+e);
         }
 
         try {
             (new codechicken.nei.plugins.redpower.NEIRedPowerConfig()).loadConfig();
             System.out.println("Loaded codechicken.nei.plugins.redpower.NEIRedPowerConfig");
         } catch (Exception e) {
-            System.out.println("Not loading codechicken.nei.plugins.redpower.NEIRedPowerConfig");
+            System.out.println("Not loading codechicken.nei.plugins.redpower.NEIRedPowerConfig: "+e);
         }
 
         System.out.println("Finished loading NEI plugins");
