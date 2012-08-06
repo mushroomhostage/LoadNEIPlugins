@@ -3,7 +3,7 @@ import codechicken.nei.IConfigureNEI;
 
 public class mod_LoadNEIPlugins extends BaseMod {
     public String getVersion() {
-        return "1.2.5r2";
+        return "1.2.5r3";
     }
 
     public void load() {
@@ -28,6 +28,13 @@ public class mod_LoadNEIPlugins extends BaseMod {
             System.out.println("Loaded mistaqur.nei.railcraft.NEIRailCraftConfig");
         } catch (Exception e) {
             System.out.println("Not loading mistaqur.nei.railcraft.NEIRailCraftConfig: "+e);
+        }
+
+        try {
+            (new mistaqur.nei.thermalexpansion.NEIthermalexpansionConfig()).loadConfig();
+            System.out.println("Loaded mistaqur.nei.thermalexpansion.NEIthermalexpansionConfig");
+        } catch (Exception e) {
+            System.out.println("Not loading mistaqur.nei.thermalexpansion.NEIthermalexpansionConfig: "+e);
         }
 
         try {
